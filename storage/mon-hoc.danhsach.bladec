@@ -1,0 +1,48 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('mon'); ?>
+ 
+
+ <body >
+ <div class="row">
+ <div class="col-lg-2"></div>
+ <div class="col-lg-8">
+ <h1>Lớp học</h1>
+ <table class="table">
+
+<thead>
+ <th>Mã môn</th>
+ <th>Tên môn</th>
+ <?php if($_SESSION['role']==1 && isset($_SESSION['role'])): ?>
+ <th>
+ <a href="<?php echo \htmlentities(BASE_URL.'quantri/index', ENT_QUOTES, 'UTF-8', false); ?>">Tạo mới</a>
+ </th>
+ <?php endif; ?>
+</thead>
+<tbody>
+ <div  class="ten-lop" >
+ <?php $__currentLoopData = $subjects; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $sub): $loop = $this->incrementLoopIndices();  ?>
+ 
+ <tr>
+ <td><?php echo \htmlentities($sub->id, ENT_QUOTES, 'UTF-8', false); ?></td>
+ <td>
+ 
+ <a href="<?php echo \htmlentities(BASE_URL . 'quiz/a/' . $sub->id, ENT_QUOTES, 'UTF-8', false); ?>"><?php echo \htmlentities($sub->name, ENT_QUOTES, 'UTF-8', false); ?></a>
+ </td>
+ <?php if($_SESSION['role']==1 && isset($_SESSION['role'])): ?>
+ <td>
+ 
+ <a href="<?php echo \htmlentities(BASE_URL . 'quantri/edit/' . $sub->id, ENT_QUOTES, 'UTF-8', false); ?>">Sửa</a>
+ </td>
+ 
+ <?php endif; ?>
+ </tr>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </div>
+</tbody>
+</table>
+ </div>
+ </div>
+ </body>
+ <?php $this->stopSection(); ?>        
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layout.mon-hoc'); } ?>

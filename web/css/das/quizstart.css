@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav-item a{
+    color: rgb(94, 91, 91) !important; 
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 20px;
+}
+.main__title i{
+    font-size: 25px !important;
+    color: #f47031 !important;
+}
+nav{
+    border-bottom: 2px solid #007bff;
+}
+.navbar-toggler{
+    background-color: rgb(222, 230, 253) !important;
+}
+.main__title span{
+    font-size: 25px;
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: 700;
+}
+.card .title{
+    font-size: 25px;
+    color: #007bff;
+}
+.date{
+    color: rgb(122, 119, 119);
+}
+.btn-outline-primary{
+    width: 150px;
+    line-height: 40px;
+}
+.title-quiz{
+    font-size: 15px;
+    color: rgb(142, 143, 143);
+}

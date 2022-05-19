@@ -1,0 +1,15 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    },
+    "require": {
+        "phroute/phroute":"^2.1",
+        "illuminate/database":"^8.83",
+        "illuminate/events":"^8.83",
+        "eftec/bladeone": "^4.4"
+        
+
+    }
+}
